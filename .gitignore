@@ -1,0 +1,10 @@
+# Hassas yapılandırma
+config.php
+special_docks
+
+# Ortam değişkenleri
+.env
+.env.*
+
+# macOS
+.DS_Store

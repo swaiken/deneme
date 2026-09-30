@@ -1,0 +1,218 @@
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İşlem Menüleri</title>
+
+<style>
+
+
+/*<---------------------------------------- Temel Sayfa CSS Kısmı Başlangıç ---------------------------------------------->*/
+
+* {
+  
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+  
+}
+
+body {
+ 
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+   background-color: #f2f6fb;
+
+}
+
+
+
+a {
+
+   text-decoration: none;
+
+}
+
+li {
+
+   list-style: none;
+
+}
+
+
+/*<---------------------------------------- Temel Sayfa CSS Kısmı Bitiş -------------------------------------------->*/
+
+/*<----------------------------------------  Tam Sayfa CSS Kısmı Başlangıç --------------------------------------------------------------->*/
+
+
+.page {
+   
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+
+}
+
+/*<----------------------------------------  Tam Sayfa CSS Kısmı Bitiş -------------------------------------------------------------->*/
+
+/*<---------------------------------------- Navigasyon CSS Kısmı Başlangıç ------------------------------------------------------------>*/
+
+
+.nav_menu {
+    padding: clamp(1rem, 1vw, 3rem); 
+    display: flex;
+    align-items: center;
+    background-color: #F5F5F5;
+
+}
+
+.active_firm {
+ 
+    color: #34495e;
+    border: 0.2rem solid #3498db;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    
+}
+
+.nav_tools{
+   
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+    margin-left: auto;
+
+}
+
+.nav_menu a{
+
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #3498db;
+    color: #34495e;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.nav_menu a:hover {
+  
+    color: #F5F5F5;
+    background-color: #3498db; 
+
+}
+
+/*<---------------------------------------- Navigasyon CSS Kısmı Bitiş ---------------------------------------------------------------->*/
+
+/*<---------------------------------------- Menü CSS Kısmı Başlangıç ---------------------------------------------------------------->*/
+
+h2 {
+ 
+    font-weight: 500;
+    font-size: clamp(1.5rem, 2.5vw, 3.5rem);
+    margin-top: clamp(0.5rem, 1vw, 2rem);
+    margin-bottom: clamp(0.5rem, 1vw, 2rem);
+    text-align: center;
+    
+
+}
+
+
+.all_table {
+
+    border: 5px solid red;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    
+
+}
+
+.table_top {
+
+    display: flex;
+    flex: 8;
+
+
+}
+
+.table_left {
+
+    border: 5px solid green;
+    flex: 1;
+    
+
+}
+
+
+.table_right {
+
+    border: 5px solid blue;
+    flex: 1;
+
+}
+
+
+.table_alt {
+
+    border: 5px solid purple;
+    flex: 1;
+
+}
+/*<---------------------------------------- Menü CSS Kısmı Bitiş ---------------------------------------------------------------------->*/
+
+
+</style>
+
+</head>
+<body>
+    
+
+<div class="page">
+
+
+
+    <nav class="nav_menu">
+            
+    <div class="active_firm">
+        Firma: <?= $firm_name; ?>
+    </div>
+
+
+
+            <ul class="nav_tools">
+                
+                <li><a href="/control_panel_elements/control_panel_page.php">Kontrol Paneli</a></li>
+                <li><a href="/control_panel_elements/control_panel_page.php">Kontrol Paneli</a></li>
+                <li><a href="/control_panel_elements/control_panel_page.php">Kontrol Paneli</a></li>
+                
+            </ul>
+</nav>
+
+<h2>Bilanço Tablosu</h2>
+
+<div class="all_table">
+
+    <div class="table_top">
+        <table class="table_left">
+         <caption>Aktif Kısmı</caption>
+          <thead>
+            <tr>Firma Adı</tr>
+            <tr>Tutar</tr>
+          </thead>
+
+
+        </table> <!-- table_left -->
+        <div class="table_right"></div>
+    </div>
+
+    <div class="table_alt"></div>
+
+</div>
+
+</div> <!-- page -->
+
+</body>
+</html>
