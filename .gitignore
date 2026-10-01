@@ -5,8 +5,6 @@ special_docks
 # Ortam değişkenleri
 .env
 .env.*
-.env.*
-.env.*
 
 # macOS
 .DS_Store
